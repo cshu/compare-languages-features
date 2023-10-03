@@ -41,15 +41,15 @@ BigInteger and BigDecimal
 
 
 <table>
-<caption>betwene num and num</caption>
+<caption>between num and num</caption>
 
 <tr><td>
 python
 </td><td>
-```
+<code>
 float(the_int)
 int(the_float) #or round(the_float) if you need to round
-```
+</code>
 </td></tr>
 
 <tr><td>
@@ -85,7 +85,7 @@ java
 
 
 <table>
-<caption>betwene num and str</caption>
+<caption>between num and str</caption>
 
 <tr><td>
 python
