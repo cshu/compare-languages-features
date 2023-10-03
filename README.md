@@ -55,22 +55,22 @@ int(the_float) #or round(the_float) if you need to round
 <tr><td>
 rust
 </td><td>
-<code>
+<pre>
 the_u64 as u32 //or use u32::try_from(the_u64) for more safety
 the_i32 as f64
 the_f64 as i32
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 int64(the_int32)
 int32(the_int64)
 int(the_float64)
 float64(the_int64)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
@@ -90,50 +90,50 @@ java
 <tr><td>
 python
 </td><td>
-<code>
+<pre>
 int(the_str)
 str(the_int)
 float(the_str)
 str(the_float)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 rust
 </td><td>
-<code>
+<pre>
 .parse::<i32>()?
 .to_string()
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 strconv.Atoi(s)
 strconv.Itoa(i)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 java
 </td><td>
-<code>
+<pre>
 Integer.parseInt(str)
 Integer.toString(n)
 Double.parseDouble(str)
 Double.toString(n)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 Number() OR parseFloat()
 ''+n OR n.toString() OR String(n)
-</code>
+</pre>
 </td></tr>
 
 </table>
@@ -146,7 +146,7 @@ Number() OR parseFloat()
 <tr><td>
 python
 </td><td>
-<code>
+<pre>
 d = {}
 k in d
 d[k] OR d.get(key[, default])
@@ -159,13 +159,13 @@ len(d)
 .values() OR list(d.values())
 d | other OR d |= other
 for k, v in d.items():
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 rust
 </td><td>
-<code>
+<pre>
 HashMap::new()
 .contains_key(k)
 d[k] OR .get(k)
@@ -178,13 +178,13 @@ d.insert(k, v)
 .values()
 .extend(d2)
 for k, v in &d {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 make(map[K]V)
 _, ok := d[k]
 d[k]
@@ -197,13 +197,13 @@ len(d)
 //https://pkg.go.dev/golang.org/x/exp/maps#Values
 //https://pkg.go.dev/maps#Copy //since 1.21 func Copy(dst M1, src M2)
 for k, v := range d {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 c#
 </td><td>
-<code>
+<pre>
 new Dictionary<K, V>()
 .ContainsKey(k)
 d[k]
@@ -216,13 +216,13 @@ d2 = new Dictionary<K, V>(d);
 .Values
 src.ToList().ForEach(x => dst.Add(x.Key, x.Value));
 foreach(KeyValuePair<K, V> kvp in d) {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 java
 </td><td>
-<code>
+<pre>
 new HashMap<>()
 .containsKey(k)
 .get(k) OR .getOrDefault(k, dv)
@@ -235,13 +235,13 @@ d2 = new HashMap(d)
 .values()
 dst.putAll(src)
 for (Map.Entry<K, V> entry : d.entrySet()) {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 new Map()//mozilla.org mentions map being better than obj: Performs better in scenarios involving frequent additions and removals of key-value pairs.
 .has(k)
 .get(k)
@@ -254,13 +254,13 @@ d2 = new Map(d)
 .values()
 newMap = new Map([...map1, ...map2])
 for (const [k, v] of d) {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 dart
 </td><td>
-<code>
+<pre>
 var d = Map<K, V>() //note LinkedHashMap is default, not HashMap
 .containsKey(k)
 d[k]
@@ -273,7 +273,7 @@ clonedMap = Map<K,V>.of(d)//Map.of is better than Map.from. Cuz it is newer, wit
 .values
 dst.addAll(src)
 for (final entry in d.entries) {}
-</code>
+</pre>
 </td></tr>
 
 </table>
@@ -286,7 +286,7 @@ for (final entry in d.entries) {}
 <tr><td>
 python
 </td><td>
-<code>
+<pre>
 l = []
 l.append(e)
 l.index(e)
@@ -300,13 +300,13 @@ l.clear() OR del l[:]
 len(l)
 l.pop([idx]) OR del l[idx]
 l.remove(e)#search and remove first e! or raises err if not found!
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 rust
 </td><td>
-<code>
+<pre>
 l = vec![]
 l.push(e)
 l.iter().position(|&r| r==x).unwrap()
@@ -320,13 +320,13 @@ l.clear()
 l.len()
 l.pop()//returns option
 l.remove(idx)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 l := make(S, s_len) OR var l []int
 l = append(l, e)
 slices.Index(l, e)//since go 1.21
@@ -338,13 +338,13 @@ slices.Reverse(l)
 slices.Clone(l)
 l = nil OR l = l[:0] //depends on whether you want gc to kick in or you want keep capacity
 len(l)//there also exists a cap(l) for capacity
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 c#
 </td><td>
-<code>
+<pre>
 new List<T>()
 .Add(e)
 .IndexOf(e)
@@ -358,13 +358,13 @@ clonedList = new List<T>(l)
 .Count
 .RemoveAt(idx)
 .Remove(e)//search and remove first e! return false if not found!
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 java
 </td><td>
-<code>
+<pre>
 new ArrayList<>()
 .add(e)
 .indexOf(e)
@@ -378,13 +378,13 @@ clear()
 size()
 remove(idx)
 remove(e)//search and remove first e! return false if not found!
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 l = []
 .push(e)
 .indexOf(e)//note compared like ===
@@ -398,13 +398,13 @@ l.push(...list2) OR l = l.concat(list2)
 .length
 .pop()
 .splice(idx, 1)//delete l[idx] does not change length, the elem becomes undefined. This is different from del in python
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 dart
 </td><td>
-<code>
+<pre>
 final growableList = <String>['A', 'B']
 l.add(e)
 l.indexOf(e)
@@ -419,7 +419,7 @@ clonedList = List<T>.of(l)//List.of is better than List.from. Cuz it is newer, w
 .removeLast()
 .removeAt(idx)
 .remove(e)//search and remove first e! return false if not found!
-</code>
+</pre>
 </td></tr>
 
 </table>
@@ -433,7 +433,7 @@ clonedList = List<T>.of(l)//List.of is better than List.from. Cuz it is newer, w
 python
 </td>
 <td>
-<code>
+<pre>
 lst = ["a", "b", "c"]
  
 for elem in enumerate(lst):
@@ -445,7 +445,7 @@ for idx, elem in enumerate(lst):
   print (idx, elem)
 
 #python enumerate() can have a 2nd parameter as start index
-</code>
+</pre>
 </td>
 </tr>
 <tr>
@@ -463,7 +463,7 @@ commonly used like somevec.iter().enumerate()
 go
 </td>
 <td>
-<code>
+<pre>
 for i, v := range sli {
 }
 ```
@@ -479,9 +479,9 @@ go for range already has index. It is NOT optional. You can use `_` though.
 <tr><td>
 python
 </td><td>
-<code>
+<pre>
 for x in lst:
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
@@ -493,10 +493,10 @@ for x in lst {}
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 for i, v := range sli {
 }
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
@@ -508,17 +508,17 @@ foreach (var x in lst) {}
 <tr><td>
 java
 </td><td>
-<code>
+<pre>
 for (T x : lst) {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 for (const x of lst) {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
@@ -546,7 +546,7 @@ for (final e in l) {}
 <tr><td>
 python
 </td><td>
-<code>
+<pre>
 s = set()
 k in s
 .add(k)
@@ -554,13 +554,13 @@ k in s
 .clear()
 .copy()#shallow copy
 len(s)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 rust
 </td><td>
-<code>
+<pre>
 HashSet::new()
 .contains(k)
 .insert(k)
@@ -569,13 +569,13 @@ HashSet::new()
 .clone()
 .len()
 .extend(s2)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 make(map[K]bool)
 _, ok := d[k]
 d[k] = true
@@ -585,13 +585,13 @@ clear(d)//since go 1.21
 len(d)
 //https://pkg.go.dev/maps#Copy //since 1.21 func Copy(dst M1, src M2)
 for k, _ := range d {}
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 c#
 </td><td>
-<code>
+<pre>
 new HashSet<K>()
 .Contains(k)
 .Add(k)
@@ -599,13 +599,13 @@ new HashSet<K>()
 .Clear()
 s2 = new HashSet<K>(s);
 .Count
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 java
 </td><td>
-<code>
+<pre>
 new HashSet<>()
 .contains(k)
 .add(k)
@@ -613,13 +613,13 @@ new HashSet<>()
 .clear()
 s2 = new HashSet(s)
 .size()
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 new Set()
 .has(k)
 .add(k)
@@ -627,13 +627,13 @@ new Set()
 .clear()
 s2 = new Set(s)
 .size
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 dart
 </td><td>
-<code>
+<pre>
 var d = <K>{} //note LinkedHashSet is default, not HashSet
 .contains(k)
 .add(k)
@@ -642,7 +642,7 @@ var d = <K>{} //note LinkedHashSet is default, not HashSet
 clonedSet = Set<K>.of(d)//Set.of is better than Set.from. Cuz it is newer, with generics
 .length
 dst.addAll(src)
-</code>
+</pre>
 </td></tr>
 
 </table>
@@ -656,9 +656,9 @@ dst.addAll(src)
 python
 </td>
 <td>
-<code>
+<pre>
 *list
-</code>
+</pre>
 </td>
 </tr>
 <tr>
@@ -717,9 +717,9 @@ java
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 .includes(str)
-</code>
+</pre>
 </td></tr>
 
 </table>
@@ -799,33 +799,33 @@ c
 <tr><td>
 python
 </td><td>
-<code>
+<pre>
 x, y = y, x
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 rust
 </td><td>
-<code>
+<pre>
 mem::swap(&mut x, &mut y)
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 go
 </td><td>
-<code>
+<pre>
 x, y = y, x
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 c#
 </td><td>
-<code>
+<pre>
 (a, b) = (b, a);//since C# 7
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
@@ -837,17 +837,17 @@ just use tmp variable
 <tr><td>
 js
 </td><td>
-<code>
+<pre>
 [a, b] = [b, a];
-</code>
+</pre>
 </td></tr>
 
 <tr><td>
 dart
 </td><td>
-<code>
+<pre>
 (b, a) = (a, b);//since Dart 3 record pattern
-</code>
+</pre>
 </td></tr>
 
 </table>
