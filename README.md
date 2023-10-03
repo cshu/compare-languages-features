@@ -76,8 +76,10 @@ float64(the_int64)
 <tr><td>
 java
 </td><td>
+<pre>
 (int) theLong
 (int) theDouble
+</pre>
 </td></tr>
 
 </table>
