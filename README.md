@@ -775,22 +775,27 @@ java/js
 
 <table>
 <caption>str literal concat</caption>
-<tr>
-<td>
+
+<tr><td>
 python
-</td>
-<td>
+</td><td>
 "FOO" "BAR"
-</td>
-</tr>
-<tr>
-<td>
+</td></tr>
+
+<tr><td>
 c
-</td>
-<td>
+</td><td>
 "FOO" "BAR"
-</td>
-</tr>
+</td></tr>
+
+<tr><td>
+awk
+</td><td>
+"FOO" "BAR"
+<br>
+#actually awk do any concat like this, not only literal concat
+</td></tr>
+
 </table>
 
 
