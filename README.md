@@ -475,6 +475,30 @@ go for range already has index. It is NOT optional. You can use `_` though.
 </table>
 
 
+
+<table>
+<caption>exponentiation operator</caption>
+
+<tr><td>
+python/bash/js/perl/php
+</td><td>
+<pre>
+**
+</pre>
+</td></tr>
+
+<tr><td>
+bc/awk
+</td><td>
+<pre>
+^
+</pre>
+</td></tr>
+
+</table>
+
+
+
 <table>
 <caption>loop iterable</caption>
 
