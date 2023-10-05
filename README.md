@@ -82,6 +82,15 @@ java
 </pre>
 </td></tr>
 
+<tr><td>
+awk
+</td><td>
+<pre>
+int(x)
+</pre>
+This removes fractional part (but remember there is no integer type. All representation and computation are floating point)
+</td></tr>
+
 </table>
 
 
@@ -136,6 +145,14 @@ js
 Number() OR parseFloat()
 ''+n OR n.toString() OR String(n)
 </pre>
+</td></tr>
+
+
+<tr><td>
+awk
+</td><td>
+thestr+0 for str-to-num
+thenum"" for num-to-str (concat)
 </td></tr>
 
 </table>
