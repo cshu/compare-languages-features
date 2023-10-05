@@ -152,6 +152,7 @@ Number() OR parseFloat()
 awk
 </td><td>
 thestr+0 for str-to-num
+<br>
 thenum"" for num-to-str (concat)
 </td></tr>
 
