@@ -571,6 +571,11 @@ dart
 for (final e in l) {}
 </td></tr>
 
+<tr><td>
+awk
+</td><td>
+for (idx1base in array)#idx starts from 1, though actually awk array is closer to dict than array
+</td></tr>
 
 </table>
 
