@@ -227,7 +227,7 @@ for k, v := range d {}
 c#
 </td><td>
 <pre>
-new Dictionary<K, V>()
+new Dictionary&lt;K, V&gt;()
 .ContainsKey(k)
 d[k]
 d[k] = v
