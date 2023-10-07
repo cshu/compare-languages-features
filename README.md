@@ -200,7 +200,7 @@ d.insert(k, v)
 .keys()
 .values()
 .extend(d2)
-for k, v in &d {}
+for k, v in &amp;d {}
 </pre>
 </td></tr>
 
@@ -246,7 +246,7 @@ foreach(KeyValuePair&lt;K, V&gt; kvp in d) {}
 java
 </td><td>
 <pre>
-new HashMap<>()
+new HashMap&lt;&gt;()
 .containsKey(k)
 .get(k) OR .getOrDefault(k, dv)
 .put(k, v)
@@ -257,7 +257,7 @@ d2 = new HashMap(d)
 .keySet()
 .values()
 dst.putAll(src)
-for (Map.Entry<K, V> entry : d.entrySet()) {}
+for (Map.Entry&lt;K, V&gt; entry : d.entrySet()) {}
 </pre>
 </td></tr>
 
@@ -284,13 +284,13 @@ for (const [k, v] of d) {}
 dart
 </td><td>
 <pre>
-var d = Map<K, V>() //note LinkedHashMap is default, not HashMap
+var d = Map&lt;K, V&gt;() //note LinkedHashMap is default, not HashMap
 .containsKey(k)
 d[k]
 d[k] = v
 .remove(k)
 .clear()
-clonedMap = Map<K,V>.of(d)//Map.of is better than Map.from. Cuz it is newer, with generics
+clonedMap = Map&lt;K, V&gt;.of(d)//Map.of is better than Map.from. Cuz it is newer, with generics
 .length
 .keys
 .values
@@ -332,7 +332,7 @@ rust
 <pre>
 l = vec![]
 l.push(e)
-l.iter().position(|&r| r==x).unwrap()
+l.iter().position(|&amp;r| r==x).unwrap()
 l[0] OR l.get(0)
 l.insert(idx, e)
 l.extend(iter) OR l.extend_from_slice(sli) //"Note that this function is same as extend except that it is specialized to work with slices instead."
@@ -368,7 +368,7 @@ len(l)//there also exists a cap(l) for capacity
 c#
 </td><td>
 <pre>
-new List<T>()
+new List&lt;T&gt;()
 .Add(e)
 .IndexOf(e)
 l[0]
@@ -376,7 +376,7 @@ l[0]
 .AddRange(IEnumerable)
 .Sort()
 .Reverse()
-clonedList = new List<T>(l)
+clonedList = new List&lt;T&gt;(l)
 .Clear()
 .Count
 .RemoveAt(idx)
@@ -388,7 +388,7 @@ clonedList = new List<T>(l)
 java
 </td><td>
 <pre>
-new ArrayList<>()
+new ArrayList&lt;&gt;()
 .add(e)
 .indexOf(e)
 l.get(0)
@@ -396,7 +396,7 @@ l.get(0)
 .addAll(collection)
 Collections.sort(l) OR l.sort(String::compareToIgnoreCase)
 Collections.reverse(l)
-clonedList = new ArrayList<>(l);
+clonedList = new ArrayList&lt;&gt;(l);
 clear()
 size()
 remove(idx)
@@ -428,7 +428,7 @@ l.push(...list2) OR l = l.concat(list2)
 dart
 </td><td>
 <pre>
-final growableList = <String>['A', 'B']
+final growableList = &lt;String&gt;['A', 'B']
 l.add(e)
 l.indexOf(e)
 l[idx]
@@ -436,7 +436,7 @@ l[idx]
 l.addAll(iterable)
 sort([int compare(E a, E b)?])
 .reversed//this returns Iterable, to get list, you need .toList()
-clonedList = List<T>.of(l)//List.of is better than List.from. Cuz it is newer, with generics
+clonedList = List&lt;T&gt;.of(l)//List.of is better than List.from. Cuz it is newer, with generics
 .clear() OR .length = 0
 .length
 .removeLast()
@@ -644,12 +644,12 @@ for k, _ := range d {}
 c#
 </td><td>
 <pre>
-new HashSet<K>()
+new HashSet&lt;T&gt;()
 .Contains(k)
 .Add(k)
 .Remove(k)
 .Clear()
-s2 = new HashSet<K>(s);
+s2 = new HashSet&lt;T&gt;(s);
 .Count
 </pre>
 </td></tr>
@@ -658,7 +658,7 @@ s2 = new HashSet<K>(s);
 java
 </td><td>
 <pre>
-new HashSet<>()
+new HashSet&lt;&gt;()
 .contains(k)
 .add(k)
 .remove(k)
@@ -686,12 +686,12 @@ s2 = new Set(s)
 dart
 </td><td>
 <pre>
-var d = <K>{} //note LinkedHashSet is default, not HashSet
+var d = &lt;T&gt;{} //note LinkedHashSet is default, not HashSet
 .contains(k)
 .add(k)
 .remove(k)
 .clear()
-clonedSet = Set<K>.of(d)//Set.of is better than Set.from. Cuz it is newer, with generics
+clonedSet = Set&lt;T&gt;.of(d)//Set.of is better than Set.from. Cuz it is newer, with generics
 .length
 dst.addAll(src)
 </pre>
@@ -807,7 +807,7 @@ strings.IndexByte(haystack, needleByte)
 rust
 </td>
 <td>
-`.find(a_pattern)` returns `Option<usize>`
+`.find(a_pattern)` returns `Option&lt;usize&gt;`
 </td>
 </tr>
 <tr>
@@ -865,7 +865,7 @@ x, y = y, x
 rust
 </td><td>
 <pre>
-mem::swap(&mut x, &mut y)
+mem::swap(&amp;mut x, &amp;mut y)
 </pre>
 </td></tr>
 
