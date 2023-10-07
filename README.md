@@ -116,7 +116,7 @@ str(the_float)
 rust
 </td><td>
 <pre>
-.parse::<i32>()?
+.parse::&lt;i32&gt;()?
 .to_string()
 </pre>
 </td></tr>
