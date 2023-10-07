@@ -233,12 +233,12 @@ d[k]
 d[k] = v
 .Remove(k)
 .Clear()
-d2 = new Dictionary<K, V>(d);
+d2 = new Dictionary&lt;K, V&gt;(d);
 .Count
 .Keys
 .Values
 src.ToList().ForEach(x => dst.Add(x.Key, x.Value));
-foreach(KeyValuePair<K, V> kvp in d) {}
+foreach(KeyValuePair&lt;K, V&gt; kvp in d) {}
 </pre>
 </td></tr>
 
