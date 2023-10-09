@@ -993,9 +993,7 @@ Just normal switch-case except that by default it does not fallthrough (But ther
 <tr><td>
 dart
 </td><td>
-<pre>
 Just normal switch-case except that only empty cases fallthrough. (Non-empty cases do NOT fallthrough)
-</pre>
 </td></tr>
 
 <tr><td>
