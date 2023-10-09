@@ -304,6 +304,45 @@ for (final entry in d.entries) {}
 
 
 <table>
+<caption>division returning integer (might be floordiv)</caption>
+
+<tr><td>
+python
+</td><td>
+<pre>
+x//y
+</pre>
+</td></tr>
+
+<tr><td>
+js
+</td><td>
+<pre>
+Math.trunc(x/y) OR Math.floor(x/y)
+</pre>
+</td></tr>
+
+<tr><td>
+dart
+</td><td>
+<pre>
+x ~/ y
+</pre>
+</td></tr>
+
+<tr><td>
+awk
+</td><td>
+<pre>
+int(x/y)
+</pre>
+</td></tr>
+
+</table>
+
+
+
+<table>
 <caption>dynamic array</caption>
 
 <tr><td>
