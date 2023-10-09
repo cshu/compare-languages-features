@@ -947,3 +947,61 @@ dart
 </td></tr>
 
 </table>
+
+
+
+<br>
+<a href="https://en.wikipedia.org/wiki/Switch_statement">Switch_statement</a>
+<br>
+<table>
+<caption>switch statement</caption>
+
+<tr><td>
+python 3.10
+</td><td>
+<pre>
+match x:
+ case 'a' | 'c':
+  #do sth #NOTE fallthrough does NOT happen!
+ case 'b':
+  #do sth
+ case _:#default
+  #do sth
+</pre>
+</td></tr>
+
+<tr><td>
+rust
+</td><td>
+<pre>
+match x {
+ 1 | 2 => what(),
+ 3 => whaat(),
+ _ => wha(),
+}
+</pre>
+</td></tr>
+
+<tr><td>
+go
+</td><td>
+Just normal switch-case except that by default it does not fallthrough (But there is a `fallthrough` keyword you can use to force it fallthrough)
+<br>
+(BTW you can do `switch {...}` without any condition)
+</td></tr>
+
+<tr><td>
+dart
+</td><td>
+<pre>
+Just normal switch-case except that only empty cases fallthrough. (Non-empty cases do NOT fallthrough)
+</pre>
+</td></tr>
+
+<tr><td>
+java/c#/c/c++/js/awk(mawk does not have it?)
+</td><td>
+Just normal switch-case
+</td></tr>
+
+</table>
