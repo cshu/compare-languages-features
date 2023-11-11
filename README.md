@@ -765,6 +765,68 @@ js
 
 
 <table>
+<caption>String interpolation</caption>
+<tr>
+<td>
+python
+</td>
+<td>
+<pre>
+'My age is {age}.'.format(age=age)#can be int
+f'My age is {age}'#after 3.6
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+go
+</td>
+<td>
+<pre>
+fmt.Sprint()
+fmt.Sprintf()//this one is particularly close to what other languagues provide
+fmt.Sprintln()
+</pre>
+</td>
+</tr>
+
+<tr><td>
+rust
+</td><td>
+format!("{x} equals {y}");
+</td></tr>
+
+<tr><td>
+c#
+</td><td>
+<pre>
+$"Hello, {ident}"
+$"""Hello, {ident}"""
+</pre>
+</td></tr>
+
+<tr>
+<td>
+java
+</td>
+<td>
+String.format("Make %s %d", "str", 42);
+</td>
+</tr>
+
+<tr><td>
+js
+</td><td>
+<pre>
+`Hello ${expr}`
+</pre>
+</td></tr>
+
+</table>
+
+
+
+<table>
 <caption>str.contains</caption>
 <tr>
 <td>
