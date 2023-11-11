@@ -667,7 +667,7 @@ go
 c#
 </td><td>
 <pre>
-@""
+@"" //or use """ similar to java. It can also be longer like """"
 </pre>
 </td></tr>
 
