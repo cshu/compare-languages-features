@@ -624,6 +624,67 @@ for (idx1base in array)#idx starts from 1, though actually awk array is closer t
 
 
 <table>
+<caption>Multiple results returned by a function</caption>
+
+<tr><td>
+python
+</td><td>
+use tuple
+<pre>
+def f():
+ return True, False
+x, y = f()
+</pre>
+</td></tr>
+
+<tr><td>
+rust
+</td><td>
+use tuple
+<pre>
+fn nums() -> (isize, isize) {
+    (1, 2)
+}
+let (foo, bar) = nums();
+</pre>
+</td></tr>
+
+<tr><td>
+go
+</td><td>
+<pre>
+func xystr(x, y string) (string, string) {
+	return y, x
+}
+</pre>
+</td></tr>
+
+<tr><td>
+c#
+</td><td>
+use tuple
+<pre>
+(string, string, string) Mkstrs()
+{
+    return ("one", "two", "three"); //tuple
+}
+var (first, second, third) = Mkstrs();
+</pre>
+</td></tr>
+
+<tr><td>
+js
+</td><td>
+<pre>
+const [foo, bar] = mkAnArray() //simply return an array and then do "Destructuring assignment"
+</pre>
+</td></tr>
+
+</table>
+
+
+
+<table>
 <caption>Null coalescing operator</caption>
 <tr><td>
 <a href="https://en.wikipedia.org/wiki/Null_coalescing_operator">link</a>
