@@ -12,7 +12,7 @@
 
 
 <table>
-<caption>arbitrary-precision arithmetic</caption>
+<caption><h2>arbitrary-precision arithmetic</h2></caption>
 <tr>
 <td>
 python
@@ -44,7 +44,7 @@ BigInteger and BigDecimal
 
 
 <table>
-<caption>between num and num</caption>
+<caption><h2>between num and num</h2></caption>
 
 <tr><td>
 python
@@ -99,7 +99,7 @@ This removes fractional part (but remember there is no integer type. All represe
 
 
 <table>
-<caption>between num and str</caption>
+<caption><h2>between num and str</h2></caption>
 
 <tr><td>
 python
@@ -164,7 +164,7 @@ thenum"" for num-to-str (concat)
 
 
 <table>
-<caption>dict</caption>
+<caption><h2>dict</h2></caption>
 
 <tr><td>
 python
@@ -304,7 +304,7 @@ for (final entry in d.entries) {}
 
 
 <table>
-<caption>division returning integer (might be floordiv)</caption>
+<caption><h2>division returning integer (might be floordiv)</h2></caption>
 
 <tr><td>
 python
@@ -343,7 +343,7 @@ int(x/y)
 
 
 <table>
-<caption>dynamic array</caption>
+<caption><h2>dynamic array</h2></caption>
 
 <tr><td>
 python
@@ -489,7 +489,7 @@ clonedList = List&lt;T&gt;.of(l)//List.of is better than List.from. Cuz it is ne
 
 
 <table>
-<caption>enumerate</caption>
+<caption><h2>enumerate</h2></caption>
 <tr>
 <td>
 python
@@ -537,7 +537,7 @@ go for range already has index. It is NOT optional. You can use `_` though.
 
 
 <table>
-<caption>exponentiation operator</caption>
+<caption><h2>exponentiation operator</h2></caption>
 
 <tr><td>
 python/bash/js/perl/php
@@ -560,7 +560,7 @@ bc/awk
 
 
 <table>
-<caption>loop iterable</caption>
+<caption><h2>loop iterable</h2></caption>
 
 <tr><td>
 python
@@ -624,7 +624,7 @@ for (idx1base in array)#idx starts from 1, though actually awk array is closer t
 
 
 <table>
-<caption>Multiple results returned by a function</caption>
+<caption><h2>Multiple results returned by a function</h2></caption>
 
 <tr><td>
 python
@@ -685,7 +685,7 @@ const [foo, bar] = mkAnArray() //simply return an array and then do "Destructuri
 
 
 <table>
-<caption>Null coalescing operator</caption>
+<caption><h2>Null coalescing operator</h2></caption>
 <tr><td>
 <a href="https://en.wikipedia.org/wiki/Null_coalescing_operator">link</a>
 </td></tr>
@@ -694,7 +694,7 @@ const [foo, bar] = mkAnArray() //simply return an array and then do "Destructuri
 
 
 <table>
-<caption>raw string literals</caption>
+<caption><h2>raw string literals</h2></caption>
 
 <tr><td>
 python
@@ -754,7 +754,7 @@ console.log(String.raw`\n`)
 
 
 <table>
-<caption>set</caption>
+<caption><h2>set</h2></caption>
 
 <tr><td>
 python
@@ -863,7 +863,7 @@ dst.addAll(src)
 
 
 <table>
-<caption>spread operator</caption>
+<caption><h2>spread operator</h2></caption>
 <tr>
 <td>
 python
@@ -887,7 +887,7 @@ js
 
 
 <table>
-<caption>String interpolation</caption>
+<caption><h2>String interpolation</h2></caption>
 <tr>
 <td>
 python
@@ -949,7 +949,7 @@ js
 
 
 <table>
-<caption>str.contains</caption>
+<caption><h2>str.contains</h2></caption>
 <tr>
 <td>
 python
@@ -1002,7 +1002,7 @@ js
 
 
 <table>
-<caption>str.find</caption>
+<caption><h2>str.find</h2></caption>
 <tr>
 <td>
 python
@@ -1047,7 +1047,7 @@ java/js
 
 
 <table>
-<caption>str literal concat</caption>
+<caption><h2>str literal concat</h2></caption>
 
 <tr><td>
 python
@@ -1074,7 +1074,7 @@ awk
 
 
 <table>
-<caption>swap values</caption>
+<caption><h2>swap values</h2></caption>
 
 <tr><td>
 python
@@ -1138,7 +1138,7 @@ dart
 <a href="https://en.wikipedia.org/wiki/Switch_statement">Switch_statement</a>
 <br>
 <table>
-<caption>switch statement</caption>
+<caption><h2>switch statement</h2></caption>
 
 <tr><td>
 python 3.10
