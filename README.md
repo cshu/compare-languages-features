@@ -229,7 +229,7 @@ c#
 <pre>
 new Dictionary&lt;K, V&gt;()
 .ContainsKey(k)
-d[k]
+d[k] OR TryGetValue
 d[k] = v
 .Remove(k)
 .Clear()
