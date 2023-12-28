@@ -531,6 +531,15 @@ for i, v := range sli {
 </pre>
 go for range already has index. It is NOT optional. You can use `_` though.
 </td>
+<td>
+c#
+</td>
+<td>
+<pre>
+foreach (var (elem, i) in lst.Select((elem, i) => ( elem, i )))
+</pre>
+//https://stackoverflow.com/questions/43021/how-do-you-get-the-index-of-the-current-iteration-of-a-foreach-loop
+</td>
 </tr>
 </table>
 
