@@ -338,6 +338,14 @@ int(x/y)
 </pre>
 </td></tr>
 
+<tr><td>
+pwsh
+</td><td>
+<pre>
+[Math]::DivRem(x,y,[ref]$null)
+</pre>
+</td></tr>
+
 </table>
 
 
